@@ -1,8 +1,8 @@
 import axios from 'axios';
-
+//with axios we can call API
 const API_KEY = '8d2a110b6ad468ae1a0e459757cf659d';
 const API_URL = 'http://api.openweathermap.org/data/2.5/weather';
-
+//put try-catch in async function since API might fail since it is dependent on external source
 export const getWeather = async (city, country) => {
     try {
         let response = await axios.get(`${API_URL}?q=${city},${country}&appid=${API_KEY}&units=metric`);
